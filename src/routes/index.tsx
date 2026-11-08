@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Carla Confeitaria — Bolos e doces artesanais em Apiaí/SP" },
-      { name: "description", content: "Bolos caseiros, tortas, salgados e doces típicos do Vale do Ribeira. Encomendas para festas em Apiaí, Capão Bonito, Itaoca e Ribeira." },
+      { name: "description", content: "Bolos caseiros e salgados típicos de Apiaí: coxinha, canudo, pastel, risoles e quibe. Encomendas para festas em Apiaí, Capão Bonito, Itaoca e Ribeira." },
       { property: "og:title", content: "Carla Confeitaria — Apiaí, Vale do Ribeira" },
       { property: "og:description", content: "Bolos que viram memória, feitos em Apiaí. Encomende pelo WhatsApp." },
       { property: "og:type", content: "website" },
@@ -24,7 +24,7 @@ function Index() {
       <Nav />
       <Hero />
       <main className="relative">
-        <div className="pointer-events-none absolute left-1/2 top-40 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-neon-purple/20 blur-[120px]" aria-hidden />
+        <div className="pointer-events-none absolute left-1/2 top-40 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-neon-pink/20 blur-[120px]" aria-hidden />
         <Doces />
         <Apiai />
         <Festas />

@@ -126,7 +126,7 @@ export function Hero() {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}
           className="mb-5 text-xs uppercase tracking-[0.35em] text-cream/90"
         >
-          Apiaí · Vale do Ribeira · desde a feira de sábado
+          Apiaí · Vale do Ribeira · agenda da semana aberta
         </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -138,7 +138,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 1 }}
           className="mt-6 max-w-lg text-lg text-cream/90"
         >
-          Confeitaria artesanal no coração do Vale do Ribeira
+          Confeitaria artesanal no coração do Vale do Ribeira. Bolos caseiros e salgados que fazem todo mundo perguntar: "quem fez?"
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 1 }}
@@ -161,7 +161,7 @@ export function Doces() {
       <Reveal>
         <Eyebrow>Nossos doces</Eyebrow>
         <h2 className="max-w-2xl text-4xl italic leading-tight text-cream md:text-6xl">
-          Do forno de lenha <span className="text-neon not-italic">pro céu da boca.</span>
+          Bolo caseiro e salgado de Apiaí. <span className="text-neon not-italic">Do jeito que você lembra.</span>
         </h2>
       </Reveal>
       <div className="mt-14 grid auto-rows-[300px] grid-cols-1 gap-5 md:grid-flow-dense md:grid-cols-4">
@@ -178,9 +178,7 @@ export function Doces() {
                   <h3 className="text-2xl italic text-cream">{d.nome}</h3>
                   <p className="mt-1 text-sm text-cream/75">{d.desc}</p>
                 </div>
-                <p className="shrink-0 text-right text-xs text-cream/70">
-                  a partir de<br /><span className="font-display text-lg text-neon-pink">{d.preco}</span>
-                </p>
+                <p className="shrink-0 rounded-full bg-neon-pink px-3 py-1 text-xs font-semibold text-night">{d.tag}</p>
               </div>
             </motion.article>
           </Reveal>
@@ -193,12 +191,12 @@ export function Doces() {
 /* ---------- 3 apiaí ---------- */
 export function Apiai() {
   return (
-    <section id="apiai" className="relative z-10 bg-gradient-to-b from-lavender via-peach to-lavender py-24 text-night md:py-32">
+    <section id="apiai" className="relative z-10 bg-gradient-to-b from-lavender via-peach to-lavender py-24 text-cream md:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
         <Reveal>
           <Eyebrow dark>Feito em Apiaí</Eyebrow>
           <h2 className="text-4xl italic leading-tight md:text-6xl">Começou numa barraca de feira.</h2>
-          <div className="mt-8 space-y-4 text-base leading-relaxed text-night/85">
+          <div className="mt-8 space-y-4 text-base leading-relaxed text-cream/85">
             <p>
               A Carla começou fazendo bolo de milho pra feira de Apiaí, embrulhado em pano de prato, ainda morno. O povo voltava no sábado seguinte perguntando pelo "bolo da Carla".
             </p>
@@ -230,7 +228,7 @@ export function Festas() {
     <section id="festas" className="relative z-10 mx-auto max-w-6xl px-5 py-24 md:py-32">
       <Reveal>
         <Eyebrow>Encomende para sua festa</Eyebrow>
-        <h2 className="max-w-2xl text-4xl italic leading-tight text-cream md:text-6xl">Mesa cheia é mesa feliz.</h2>
+        <h2 className="max-w-2xl text-4xl italic leading-tight text-cream md:text-6xl">Sua festa sem dor de cabeça. Vagas limitadas por semana.</h2>
       </Reveal>
       <div className="mt-14 grid gap-5 md:grid-cols-3">
         {festas.map((f, i) => (
@@ -246,9 +244,9 @@ export function Festas() {
               <img src={f.img} alt={f.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
               <div className="bg-card-overlay absolute inset-0" aria-hidden />
               <div className="absolute inset-x-0 bottom-0 p-7">
-                <h3 className="text-4xl italic text-cream">{f.titulo}</h3>
-                <p className="mt-2 text-sm text-cream/90">{f.desc}</p>
-                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cream">
+                <h3 className="text-4xl italic text-night">{f.titulo}</h3>
+                <p className="mt-2 text-sm text-night/90">{f.desc}</p>
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-night">
                   Pedir orçamento
                   <svg viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                 </span>
@@ -267,7 +265,7 @@ export function Galeria() {
     <section id="galeria" className="relative z-10 mx-auto max-w-6xl px-5 py-24 md:py-32">
       <Reveal>
         <Eyebrow>Mural da cozinha</Eyebrow>
-        <h2 className="text-4xl italic leading-tight text-cream md:text-6xl">Saiu do forno essa semana</h2>
+        <h2 className="text-4xl italic leading-tight text-cream md:text-6xl">Feito essa semana pra festas de Apiaí</h2>
       </Reveal>
       <div className="mt-14 grid auto-rows-[180px] grid-cols-2 gap-4 md:auto-rows-[220px] md:grid-cols-3">
         {galeria.map((g, i) => (
@@ -297,7 +295,7 @@ export function Depoimentos() {
     <section className="relative z-10 mx-auto max-w-4xl px-5 py-24 text-center md:py-32" aria-roledescription="carrossel">
       <Reveal>
         <Eyebrow>Quem provou</Eyebrow>
-        <h2 className="text-4xl italic text-cream md:text-5xl">O Vale inteiro comenta</h2>
+        <h2 className="text-4xl italic text-cream md:text-5xl">Quem prova, volta. E indica.</h2>
       </Reveal>
       <div className="glass relative mt-12 min-h-[300px] rounded-[2rem] p-8 md:p-12">
         <AnimatePresence mode="wait">
@@ -354,10 +352,10 @@ export function CtaFinal() {
     <section className="relative z-10 px-5 py-16">
       <Reveal className="bg-neon relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] px-6 py-20 text-center md:py-28">
         <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-peach/40 blur-3xl" aria-hidden />
-        <div className="absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-night/50 blur-3xl" aria-hidden />
-        <h2 className="relative mx-auto max-w-3xl text-5xl italic leading-[1] text-cream md:text-7xl">Pronto pra encomendar seu doce?</h2>
-        <p className="relative mt-6 text-cream/90">Chama no WhatsApp: {WHATSAPP_DISPLAY}</p>
-        <a href={waLink()} target="_blank" rel="noreferrer" className="relative mt-10 inline-flex items-center gap-3 rounded-full bg-whatsapp px-9 py-5 text-base font-semibold text-night glow-green transition-transform hover:scale-105">
+        <div className="absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-neon-purple/50 blur-3xl" aria-hidden />
+        <h2 className="relative mx-auto max-w-3xl text-5xl italic leading-[1] text-night md:text-7xl">Pronto pra encomendar seu doce?</h2>
+        <p className="relative mt-6 text-night/95">A agenda do fim de semana fecha rápido. Garanta sua data: {WHATSAPP_DISPLAY}</p>
+        <a href={waLink()} target="_blank" rel="noreferrer" className="relative mt-10 inline-flex items-center gap-3 rounded-full bg-whatsapp px-9 py-5 text-base font-semibold text-cream glow-green transition-transform hover:scale-105">
           <WaIcon className="h-6 w-6" /> Falar com a Carla
         </a>
       </Reveal>
@@ -381,7 +379,7 @@ export function Footer() {
           <li><a href={waLink()} target="_blank" rel="noreferrer" className="hover:text-neon-pink">WhatsApp {WHATSAPP_DISPLAY}</a></li>
         </ul>
       </div>
-      <p className="mt-10 text-xs text-cream/60">© 2026 Carla Confeitaria. Feito com milho, banana e carinho em Apiaí.</p>
+      <p className="mt-10 text-xs text-cream/60">© 2026 Carla Confeitaria. Feito com carinho em Apiaí.</p>
     </footer>
   );
 }
