@@ -119,8 +119,8 @@ export function Hero() {
         style={{ y, scale }}
         className="absolute inset-0 h-full w-full object-cover object-[60%_center]"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-peach/30 via-transparent to-night" aria-hidden />
-      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-night via-night/70 to-transparent" aria-hidden />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-night" aria-hidden />
+      <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-night via-night/60 to-transparent" aria-hidden />
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-16 pt-32 md:pb-24">
         <motion.p
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}
