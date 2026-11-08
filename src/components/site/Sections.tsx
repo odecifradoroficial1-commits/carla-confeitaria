@@ -1,7 +1,7 @@
 import { useRef, useState, type ReactNode } from "react";
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import heroImg from "@/assets/hero-cake.jpg";
-import feiraImg from "@/assets/feira-ingredientes.jpg";
+import ceuImg from "@/assets/ceu-bolhas.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { depoimentos, doces, faq, festas, galeria, waLink, WHATSAPP_DISPLAY } from "./data";
 
@@ -51,15 +51,17 @@ const btnOutline =
   "inline-flex items-center justify-center gap-2 rounded-full border border-cream/70 px-7 py-4 text-sm font-semibold text-cream backdrop-blur-md transition-colors hover:bg-cream/10";
 
 /* ---------- bubbles ---------- */
-const bubbles = Array.from({ length: 14 }, (_, i) => ({
+const bubbles = Array.from({ length: 22 }, (_, i) => ({
   left: `${(i * 37) % 100}%`,
-  size: 12 + ((i * 23) % 60),
+  size: 18 + ((i * 23) % 90),
   dur: 22 + ((i * 7) % 20),
   delay: -((i * 5) % 30),
 }));
 export function Bubbles() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
+      <img src={ceuImg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <div className="absolute inset-0 bg-night/55" />
       {bubbles.map((b, i) => (
         <span
           key={i}
@@ -74,7 +76,6 @@ export function Bubbles() {
 /* ---------- nav ---------- */
 const links = [
   ["Doces", "#doces"],
-  ["Apiaí", "#apiai"],
   ["Festas", "#festas"],
   ["Galeria", "#galeria"],
   ["Dúvidas", "#faq"],
@@ -172,7 +173,7 @@ export function Doces() {
               className="glass group relative flex h-full flex-col overflow-hidden rounded-3xl transition-shadow duration-500 hover:glow-pink"
             >
               <img src={d.img} alt={d.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-night via-night/40 to-transparent" aria-hidden />
+              <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-transparent to-transparent" aria-hidden />
               <div className="glass relative mx-3 mb-3 mt-auto flex flex-wrap items-end justify-between gap-x-4 gap-y-2 rounded-2xl bg-night/40 p-4">
                 <div>
                   <h3 className="text-2xl italic text-cream">{d.nome}</h3>
@@ -183,40 +184,6 @@ export function Doces() {
             </motion.article>
           </Reveal>
         ))}
-      </div>
-    </section>
-  );
-}
-
-/* ---------- 3 apiaí ---------- */
-export function Apiai() {
-  return (
-    <section id="apiai" className="relative z-10 bg-gradient-to-b from-lavender via-peach to-lavender py-24 text-cream md:py-32">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
-        <Reveal>
-          <Eyebrow dark>Feito em Apiaí</Eyebrow>
-          <h2 className="text-4xl italic leading-tight md:text-6xl">Começou numa barraca de feira.</h2>
-          <div className="mt-8 space-y-4 text-base leading-relaxed text-cream/85">
-            <p>
-              A Carla começou fazendo bolo de milho pra feira de Apiaí, embrulhado em pano de prato, ainda morno. O povo voltava no sábado seguinte perguntando pelo "bolo da Carla".
-            </p>
-            <p>
-              Hoje atende toda a região do Vale do Ribeira — Apiaí, Capão Bonito, Itaoca e Ribeira — com ingredientes da terra: banana da baixada, milho verde, goiabada cascão, mandioca e palmito de produtor local. Cultura caipira, sem pressa e sem conservante.
-            </p>
-          </div>
-          <blockquote className="glass-light mt-10 rounded-3xl p-7">
-            <p className="font-display text-2xl italic leading-snug md:text-3xl">
-              "A gente faz doce com o que a terra dá — banana, milho, goiaba, mandioca. Receita de vó, tempero de Apiaí."
-            </p>
-            <footer className="mt-4 text-sm font-medium text-neon-purple">— Carla</footer>
-          </blockquote>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-[2.5rem] bg-neon opacity-40 blur-2xl" aria-hidden />
-            <img src={feiraImg} alt="Banca de feira rural com bananas, milho, goiabada, mandioca e palmito" loading="lazy" width={1024} height={1280} className="relative aspect-[4/5] w-full rounded-[2rem] object-cover" />
-          </div>
-        </Reveal>
       </div>
     </section>
   );
