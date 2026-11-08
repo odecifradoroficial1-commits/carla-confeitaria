@@ -292,7 +292,7 @@ export function Galeria() {
 /* ---------- 6 depoimentos ---------- */
 export function Depoimentos() {
   const [i, setI] = useState(0);
-  const d = depoimentos[i];
+  const d = depoimentos[i] ?? depoimentos[0]!;
   const go = (n: number) => setI((n + depoimentos.length) % depoimentos.length);
   return (
     <section className="relative z-10 mx-auto max-w-4xl px-5 py-24 text-center md:py-32" aria-roledescription="carrossel">
