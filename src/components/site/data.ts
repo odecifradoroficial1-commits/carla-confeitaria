@@ -33,19 +33,19 @@ export const doces = [
     span: "",
   },
   {
-    nome: "Doces típicos do Vale",
-    desc: "Doce de banana, goiabada, pé de moleque, pamonha",
-    preco: "R$ 12",
-    img: u("photo-1606313564200-e75d5e30476c"),
-    alt: "Doces caseiros cortados em quadradinhos",
-    span: "md:col-span-2",
-  },
-  {
     nome: "Bolos temáticos infantis",
     desc: "Do dinossauro à princesa, do jeito que a criança sonhou",
     preco: "R$ 120",
     img: u("photo-1464349095431-e9a21285b5f3", 1200),
     alt: "Bolo colorido decorado para festa infantil",
+    span: "md:col-span-2",
+  },
+  {
+    nome: "Doces típicos do Vale",
+    desc: "Doce de banana, goiabada, pé de moleque, pamonha",
+    preco: "R$ 12",
+    img: u("photo-1606313564200-e75d5e30476c"),
+    alt: "Doces caseiros cortados em quadradinhos",
     span: "md:col-span-2",
   },
   {
