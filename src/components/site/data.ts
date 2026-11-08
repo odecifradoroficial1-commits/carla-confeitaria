@@ -1,3 +1,11 @@
+import boloCaseiro from "@/assets/bolo-caseiro.jpg";
+import boloFesta from "@/assets/bolo-festa.jpg";
+import coxinha from "@/assets/coxinha.jpg";
+import canudo from "@/assets/canudo.jpg";
+import pastel from "@/assets/pastel.jpg";
+import risolesQuibe from "@/assets/risoles-quibe.jpg";
+import coffeeBreak from "@/assets/coffee-break.jpg";
+
 export const WHATSAPP_NUMBER = "5515999999999";
 export const WHATSAPP_DISPLAY = "(15) 99999-9999";
 
@@ -8,42 +16,42 @@ const u = (id: string, w = 900) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=75`;
 
 export const doces = [
-  { nome: "Bolos caseiros", desc: "Milho, cenoura com chocolate, fubá — o sabor de domingo na casa da vó", tag: "O mais pedido", img: u("photo-1578985545062-69928b1d9587", 1200), alt: "Bolo caseiro de chocolate com cobertura", span: "md:col-span-2 md:row-span-2" },
-  { nome: "Coxinha", desc: "Massa macia, frango bem temperado", tag: "Sai primeiro na festa", img: u("photo-1555507036-ab1f4038808a"), alt: "Salgados fritos dourados", span: "" },
-  { nome: "Canudo", desc: "Crocante, recheado na hora", tag: "Clássico de Apiaí", img: u("photo-1558961363-fa8fdf82db35"), alt: "Canudos crocantes recheados", span: "" },
-  { nome: "Bolos de festa", desc: "Temáticos e recheados pra criançada e pra família", tag: "Agenda enche rápido", img: u("photo-1464349095431-e9a21285b5f3", 1200), alt: "Bolo colorido decorado para festa", span: "md:col-span-2" },
-  { nome: "Pastéis", desc: "Carne, queijo e palmito — massa fininha e sequinha", tag: "Feito no dia", img: u("photo-1601050690597-df0568f70950", 1200), alt: "Pastéis fritos crocantes", span: "md:col-span-2" },
-  { nome: "Risoles e quibe", desc: "Risoles cremoso e quibe bem temperado, do jeito de Apiaí", tag: "Todo mundo repete", img: u("photo-1606313564200-e75d5e30476c", 1200), alt: "Salgados variados para festa", span: "md:col-span-2" },
+  { nome: "Bolos caseiros", desc: "Milho, cenoura com chocolate, fubá — o sabor de domingo na casa da vó", tag: "O mais pedido", img: boloCaseiro, alt: "Bolo de milho e bolo de cenoura com chocolate fatiados", span: "md:col-span-2 md:row-span-2" },
+  { nome: "Coxinha", desc: "Massa macia, frango bem temperado", tag: "Sai primeiro na festa", img: coxinha, alt: "Coxinhas douradas, uma aberta mostrando o recheio de frango", span: "" },
+  { nome: "Canudo", desc: "Crocante, recheado na hora", tag: "Clássico de Apiaí", img: canudo, alt: "Canudos crocantes recheados com doce de leite e frango", span: "" },
+  { nome: "Bolos de festa", desc: "Temáticos e recheados pra criançada e pra família", tag: "Agenda enche rápido", img: boloFesta, alt: "Bolo de aniversário infantil rosa com velas e brigadeiros", span: "md:col-span-2" },
+  { nome: "Pastéis", desc: "Carne, queijo e palmito — massa fininha e sequinha", tag: "Feito no dia", img: pastel, alt: "Pastéis de feira, um aberto com carne e queijo", span: "md:col-span-2" },
+  { nome: "Risoles e quibe", desc: "Risoles cremoso e quibe bem temperado, do jeito de Apiaí", tag: "Todo mundo repete", img: risolesQuibe, alt: "Bandeja com risoles e quibes com limão", span: "md:col-span-2" },
 ];
 
 export const festas = [
   {
     titulo: "Aniversários",
     desc: "Bolo temático + cento de coxinha, risoles e quibe. A festa resolvida numa mensagem.",
-    img: u("photo-1530103862676-de8c9debad1d", 1000),
-    alt: "Festa de aniversário com bolo e velas",
+    img: boloFesta,
+    alt: "Bolo de aniversário infantil com velas",
   },
   {
     titulo: "Festas e eventos",
     desc: "Salgados e bolos grandes pra batizado, chá, formatura e casamento.",
-    img: u("photo-1486427944299-d1955d23e34d", 1000),
-    alt: "Bolo grande decorado em mesa de evento",
+    img: risolesQuibe,
+    alt: "Bandeja de salgados para evento",
   },
   {
     titulo: "Coffee break",
     desc: "Kits pra empresa com salgados quentinhos e bolo caseiro. Entrega no horário.",
-    img: u("photo-1559620192-032c4bc4674e", 1000),
-    alt: "Xícaras de café e quitutes para coffee break",
+    img: coffeeBreak,
+    alt: "Mesa de coffee break com coxinhas, bolo caseiro e café",
   },
 ];
 
 export const galeria = [
-  { nome: "Bolo de cenoura com chocolate", img: u("photo-1621303837174-89787a7d4729"), span: "row-span-2" },
-  { nome: "Coxinhas douradas", img: u("photo-1555507036-ab1f4038808a"), span: "" },
-  { nome: "Bolo de festa", img: u("photo-1464349095431-e9a21285b5f3"), span: "" },
-  { nome: "Canudos recheados", img: u("photo-1558961363-fa8fdf82db35"), span: "row-span-2" },
-  { nome: "Bolo de chocolate", img: u("photo-1578985545062-69928b1d9587"), span: "" },
-  { nome: "Pastéis sequinhos", img: u("photo-1601050690597-df0568f70950"), span: "" },
+  { nome: "Bolo de milho e de cenoura", img: boloCaseiro, span: "row-span-2" },
+  { nome: "Coxinhas douradas", img: coxinha, span: "" },
+  { nome: "Bolo de aniversário", img: boloFesta, span: "" },
+  { nome: "Canudos recheados", img: canudo, span: "row-span-2" },
+  { nome: "Pastéis sequinhos", img: pastel, span: "" },
+  { nome: "Risoles e quibe", img: risolesQuibe, span: "" },
 ];
 
 export const depoimentos = [

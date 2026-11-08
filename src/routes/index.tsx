@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  Apiai, Bubbles, CtaFinal, Depoimentos, Doces, Faq, Festas, Footer, Galeria, Hero, Nav,
+  Bubbles, CtaFinal, Depoimentos, Doces, Faq, Festas, Footer, Galeria, Hero, Nav,
 } from "@/components/site/Sections";
 
 export const Route = createFileRoute("/")({
@@ -19,14 +19,13 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="bg-sky relative min-h-screen overflow-x-clip">
+    <div className="relative min-h-screen overflow-x-clip">
       <Bubbles />
       <Nav />
       <Hero />
       <main className="relative">
         <div className="pointer-events-none absolute left-1/2 top-40 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-neon-pink/20 blur-[120px]" aria-hidden />
         <Doces />
-        <Apiai />
         <Festas />
         <Galeria />
         <Depoimentos />
