@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="relative min-h-screen overflow-x-clip">
+    <div className="bg-sky relative min-h-screen overflow-x-clip">
       <Bubbles />
       <Nav />
       <Hero />

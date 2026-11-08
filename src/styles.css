@@ -136,7 +136,7 @@
     border-color: var(--color-border);
   }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; background: #FFE4D0; }
   body {
     background: var(--gradient-sky);
     color: var(--color-foreground);
@@ -161,7 +161,7 @@
   border: 1px solid color-mix(in oklab, var(--neon-pink) 28%, transparent);
 }
 @utility glass-light {
-  background: color-mix(in oklab, var(--cream) 45%, transparent);
+  background: color-mix(in oklab, white 55%, transparent);
   backdrop-filter: blur(14px);
   border: 1px solid color-mix(in oklab, var(--neon-pink) 25%, transparent);
 }
