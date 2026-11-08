@@ -173,7 +173,7 @@ export function Doces() {
             >
               <img src={d.img} alt={d.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-night via-night/40 to-transparent" aria-hidden />
-              <div className="glass relative mx-3 mb-3 mt-auto flex items-end justify-between gap-4 rounded-2xl bg-night/40 p-4">
+              <div className="glass relative mx-3 mb-3 mt-auto flex flex-wrap items-end justify-between gap-x-4 gap-y-2 rounded-2xl bg-night/40 p-4">
                 <div>
                   <h3 className="text-2xl italic text-cream">{d.nome}</h3>
                   <p className="mt-1 text-sm text-cream/75">{d.desc}</p>
