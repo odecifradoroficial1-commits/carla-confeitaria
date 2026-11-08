@@ -164,17 +164,16 @@ export function Doces() {
           Do forno de lenha <span className="text-neon not-italic">pro céu da boca.</span>
         </h2>
       </Reveal>
-      <div className="mt-14 grid auto-rows-[260px] grid-cols-1 gap-5 md:grid-cols-4">
+      <div className="mt-14 grid auto-rows-[300px] grid-cols-1 gap-5 md:grid-flow-dense md:grid-cols-4">
         {doces.map((d, i) => (
           <Reveal key={d.nome} delay={i * 0.08} className={d.span}>
             <motion.article
               whileHover={{ y: -6 }}
               className="glass group relative flex h-full flex-col overflow-hidden rounded-3xl transition-shadow duration-500 hover:glow-pink"
             >
-              <div className="relative flex-1 overflow-hidden">
-                <img src={d.img} alt={d.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <div className="flex items-end justify-between gap-4 p-5">
+              <img src={d.img} alt={d.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-night via-night/40 to-transparent" aria-hidden />
+              <div className="glass relative mx-3 mb-3 mt-auto flex items-end justify-between gap-4 rounded-2xl bg-night/40 p-4">
                 <div>
                   <h3 className="text-2xl italic text-cream">{d.nome}</h3>
                   <p className="mt-1 text-sm text-cream/75">{d.desc}</p>

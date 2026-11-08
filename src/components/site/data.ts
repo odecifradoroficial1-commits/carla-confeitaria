@@ -38,7 +38,7 @@ export const doces = [
     preco: "R$ 12",
     img: u("photo-1606313564200-e75d5e30476c"),
     alt: "Doces caseiros cortados em quadradinhos",
-    span: "md:row-span-2",
+    span: "md:col-span-2",
   },
   {
     nome: "Bolos temáticos infantis",
@@ -54,7 +54,7 @@ export const doces = [
     preco: "sob consulta",
     img: u("photo-1488477181946-6428a0291777"),
     alt: "Mesa com sobremesas variadas e frutas",
-    span: "",
+    span: "md:col-span-2",
   },
 ];
 
